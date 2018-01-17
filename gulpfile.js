@@ -8,12 +8,19 @@ var rename = require('gulp-rename');
 var changed = require('gulp-changed');
 
 var gulp_util = require('gulp-util');
-
+// var jshint = require('gulp-jshint');
 
 var SCSS_SRC = './src/assets/scss/**/*.scss';
 var SCSS_DES = './src/assets/css';
 
+// gulp.task('jshint', function() {
+//     return gulp.src('./src/**/*.js')
+//       .pipe(jshint())
+//       .pipe(jshint.reporter('jshint-stylish'));
+// });
+
 gulp.task('compile_css', function(){
+    gulp_util.log('Gulp is running compile_css task!')
     gulp.src(SCSS_SRC)
     .pipe(sass().on('error', sass.logError))
     .pipe(minifyCSS())
