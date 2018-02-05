@@ -13,6 +13,8 @@ import ServicesPage from './components/landing/servicesPage';
 import ContactPage from './components/landing/contactPage';
 import ProviderHome from './components/provider/providerHome';
 import ClientHome from './components/client/clientHome';
+import ProviderSignUpPage from './components/provider/provSignUpPage';
+import ClientSignUpPage from './components/client/clientSignUpPage';
 //includes
 import './assets/css/default.min.css';
 
@@ -27,6 +29,8 @@ class App extends Component {
         <Route exact path='/Contact' component={ContactPage} />
         <Route exact path='/Provider' component={ProviderHome} />
         <Route exact path='/Client' component={ClientHome} />
+        <Route exact path='/ClientSignUp' component={ClientSignUpPage} />
+        <Route exact path='/ProviderSignUp' component={ProviderSignUpPage} />
         <Footer />
       </div>
       </Router>
